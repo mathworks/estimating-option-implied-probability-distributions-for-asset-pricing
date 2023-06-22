@@ -30,10 +30,10 @@ The examples are provided in a MATLAB project.
 This example was updated using MATLAB release R2022b.
 - [MATLAB&reg;](https://www.mathworks.com/products/matlab.html)
 - [Statistics and Machine Learning Toolbox&trade;](https://www.mathworks.com/products/statistics.html)
-- [Optimization Toolbox&trade;](https://mathworks.com/products/optimization.html)
-- [Financial Toolbox&trade;](https://mathworks.com/products/finance.html)
-- [Financial Instruments Toolbox&trade;](https://mathworks.com/products/financial-instruments.html)
-- [Curve Fitting Toolbox&trade;](https://mathworks.com/products/curvefitting.html)
+- [Optimization Toolbox&trade;](https://www.mathworks.com/products/optimization.html)
+- [Financial Toolbox&trade;](https://www.mathworks.com/products/finance.html)
+- [Financial Instruments Toolbox&trade;](https://www.mathworks.com/products/financial-instruments.html)
+- [Curve Fitting Toolbox&trade;](https://www.mathworks.com/products/curvefitting.html)
 
 ## License
 The license for this entry is available in the [license.txt](license.txt) file in this GitHub repository.
