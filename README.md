@@ -1,6 +1,6 @@
 # Estimating Option-Implied Probability Distributions for Asset Pricing
 
-[![View Estimating Option-Implied Probability Distributions for Asset Pricing on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/53473-estimating-option-implied-probability-distributions-for-asset-pricing)
+[![View Estimating Option-Implied Probability Distributions for Asset Pricing on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/53473-option-implied-probability-distributions-for-asset-pricing)
 
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/estimating-option-implied-probability-distributions-for-asset-pricing&project=Options.prj)
 
@@ -32,10 +32,10 @@ The examples are provided in a MATLAB project.
 This example was updated using MATLAB release R2022b.
 - [MATLAB&reg;](https://www.mathworks.com/products/matlab.html)
 - [Statistics and Machine Learning Toolbox&trade;](https://www.mathworks.com/products/statistics.html)
-- [Optimization Toolbox&trade;](https://mathworks.com/products/optimization.html)
-- [Financial Toolbox&trade;](https://mathworks.com/products/finance.html)
-- [Financial Instruments Toolbox&trade;](https://mathworks.com/products/financial-instruments.html)
-- [Curve Fitting Toolbox&trade;](https://mathworks.com/products/curvefitting.html)
+- [Optimization Toolbox&trade;](https://www.mathworks.com/products/optimization.html)
+- [Financial Toolbox&trade;](https://www.mathworks.com/products/finance.html)
+- [Financial Instruments Toolbox&trade;](https://www.mathworks.com/products/financial-instruments.html)
+- [Curve Fitting Toolbox&trade;](https://www.mathworks.com/products/curvefitting.html)
 
 ## License
 The license for this entry is available in the [license.txt](license.txt) file in this GitHub repository.
