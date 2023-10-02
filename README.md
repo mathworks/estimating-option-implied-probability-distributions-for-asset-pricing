@@ -2,7 +2,7 @@
 
 [![View Estimating Option-Implied Probability Distributions for Asset Pricing on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/53473-option-implied-probability-distributions-for-asset-pricing)
 
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/estimating-option-implied-probability-distributions-for-asset-pricing&project=Options.prj)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/estimating-option-implied-probability-distributions-for-asset-pricing&file=DistributionsForAssetPricing.mlx)
 
 Forecasting the performance of an asset and quantifying the uncertainty associated with such a forecast is a difficult task: one that is frequently made more difficult by a shortage of observed market data.
 
