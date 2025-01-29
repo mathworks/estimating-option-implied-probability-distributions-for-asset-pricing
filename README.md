@@ -1,8 +1,7 @@
 # Estimating Option-Implied Probability Distributions for Asset Pricing
 
-[![View Estimating Option-Implied Probability Distributions for Asset Pricing on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/53473-option-implied-probability-distributions-for-asset-pricing)
-
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/estimating-option-implied-probability-distributions-for-asset-pricing&project=Options.prj&file=DistributionsForAssetPricing.mlx)
+[![View Estimating Option-Implied Probability Distributions for Asset Pricing on File Exchange](readme/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/53473-option-implied-probability-distributions-for-asset-pricing)
+[![Open in MATLAB Online](readme/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/estimating-option-implied-probability-distributions-for-asset-pricing&project=Options.prj&file=DistributionsForAssetPricing.mlx)
 
 Forecasting the performance of an asset and quantifying the uncertainty associated with such a forecast is a difficult task: one that is frequently made more difficult by a shortage of observed market data.
 
@@ -18,7 +17,7 @@ The main steps in this workflow are:
 * Simulating future asset prices
 * Presenting the forecast uncertainty in a fan chart
 
-![](FanChart.png)
+![](readme/FanChart.png)
 
 ## Installation and Getting Started
 The examples are provided in a MATLAB project.
