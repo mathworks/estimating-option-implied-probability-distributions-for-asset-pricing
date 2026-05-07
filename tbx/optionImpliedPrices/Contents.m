@@ -1,0 +1,7 @@
+% Estimating Option-Implied Probability Distributions for Asset Pricing
+% Version 1.0.5 (R2026a) 07-May-2026
+%
+% DistributionsForAssetPricing - Main example script
+% generateSampleOptionData     - Function to create example data
+
+% Copyright 2015-2026 The MathWorks, Inc.

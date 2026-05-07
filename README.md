@@ -1,7 +1,7 @@
 # Estimating Option-Implied Probability Distributions for Asset Pricing
 
 [![View Estimating Option-Implied Probability Distributions for Asset Pricing on File Exchange](readme/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/53473-option-implied-probability-distributions-for-asset-pricing)
-[![Open in MATLAB Online](readme/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/estimating-option-implied-probability-distributions-for-asset-pricing&project=Options.prj&file=DistributionsForAssetPricing.mlx)
+[![Open in MATLAB Online](readme/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/estimating-option-implied-probability-distributions-for-asset-pricing&project=Options.prj&file=DistributionsForAssetPricing.m)
 
 Forecasting the performance of an asset and quantifying the uncertainty associated with such a forecast is a difficult task: one that is frequently made more difficult by a shortage of observed market data.
 
@@ -20,15 +20,15 @@ The main steps in this workflow are:
 ![](readme/FanChart.png)
 
 ## Installation and Getting Started
-The examples are provided in a MATLAB project.
-1. Double-click on the project archive (`Options.mlproj`) to extract it using MATLAB.
-2. With MATLAB open, navigate to the newly-created project folder and double-click on the project file (`Options.prj`) to open the project.
-3. The main example file is the live script `DistributionsForAssetPricing.mlx` within the project.
-4. The examples rely on simulated option price data created by the function `generateSampleOptionData.mlx`.
+The examples are provided as a [MATLAB toolbox](https://www.mathworks.com/help/matlab/matlab_prog/create-and-share-custom-matlab-toolboxes.html).
+1. Download the toolbox installer (the `.mltbx` file) from the `Releases` section on GitHub.
+2. Double-click on the `.mltbx` file to install the toolbox.
+3. Open the main example script: `>> edit DistributionsForAssetPricing`
+4. The examples rely on simulated option price data created by the function `generateSampleOptionData`.
 
 ### [MathWorks&reg;](https://www.mathworks.com) Product Requirements
 
-This example was updated using MATLAB release R2022b.
+This example requires MATLAB R2025a or a later release.
 - [MATLAB&reg;](https://www.mathworks.com/products/matlab.html)
 - [Statistics and Machine Learning Toolbox&trade;](https://www.mathworks.com/products/statistics.html)
 - [Optimization Toolbox&trade;](https://www.mathworks.com/products/optimization.html)
@@ -39,7 +39,7 @@ This example was updated using MATLAB release R2022b.
 ## License
 The license for this entry is available in the [license.txt](license.txt) file in this GitHub repository.
 
-Copyright 2015-2023 The MathWorks, Inc.
+Copyright 2015-2026 The MathWorks, Inc.
 
 ## Community Support
 [MATLAB Central](https://www.mathworks.com/matlabcentral)
