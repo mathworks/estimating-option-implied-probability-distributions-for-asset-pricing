@@ -1,0 +1,12 @@
+{
+    "ToolboxName":"Option-Implied Prices",
+    "Identifier":"cbd46d80-07d3-4b3f-8f75-78272f782e94",
+    "Summary":"Estimating Option-Implied Probability Distributions for Asset Pricing",
+    "Description":"Forecasting the performance of an asset and quantifying the uncertainty associated with such a forecast is a difficult task: one that is frequently made more difficult by a shortage of observed market data. This example illustrates one approach for creating a price forecast based on option price data. This toolbox contains the code and examples for the technical article 'Estimating Option-Implied Probability Distributions for Asset Pricing'.",
+    "AuthorCompany":"MathWorks",
+    "AuthorName":"Ken Deeley",
+    "AuthorEmail":"kdeeley@mathworks.com",
+    "ToolboxFolder":"./tbx",
+    "ToolboxMatlabPath": ["./tbx", "./tbx/optionImpliedPrices"],
+    "MinimumMatlabRelease":"R2025a"
+}

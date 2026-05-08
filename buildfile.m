@@ -69,7 +69,7 @@ passed = checkResults.Passed;
 notPassed = ~passed;
 if any( notPassed )
     disp( checkResults(notPassed, :) )
-    assert( all( passed ), "buildfile:ProjectCheckFailed", ...
+    assert( all( passed ), "buildfile:checkProject:ProjectCheckFailed", ...
         "At least one project check has failed. " + ...
         "Resolve the failure(s) shown above to continue." )    
 else
@@ -94,49 +94,54 @@ export( doc, exportName, ...
 
 end % docTask
 
-function packageTask( ~ )
-% Package toolbox
+function packageTask( context )
+% Package the toolbox.
 
-% Load and tweak metadata
-s = jsondecode( fileread( tbxname() + ".json" ) );
-v = ver( tbxname() ); % from Contents.m
-assert( isscalar( v ), "build:package", ...
-    "Found %d instances of %s on the MATLAB path.", numel( v ), tbxname() )
-s.ToolboxName = v.Name;
-s.ToolboxVersion = v.Version;
+% Import and update the toolbox metadata.
+projectRoot = context.Plan.RootFolder;
+toolboxJSON = fullfile( projectRoot, tbxname() + ".json" );
+meta = jsondecode( fileread( toolboxJSON ) );
+meta.ToolboxFolder = fullfile( projectRoot, meta.ToolboxFolder );
+meta.ToolboxMatlabPath = fullfile( projectRoot, meta.ToolboxMatlabPath );
+
+% Synchronize the toolbox version with the version in Contents.m.
+versionString = feval( @( s ) s(1).Version, ver( tbxname() ) ); %#ok<FVAL>
+meta.ToolboxVersion = versionString;
+
+% Specify the location of the output toolbox.
+mltbx = fullfile( projectRoot, "releases", ...
+    meta.ToolboxName + " " + versionString + ".mltbx" );
+meta.OutputFile = mltbx;
 
 if getenv( "GITHUB_ACTIONS" ) == "true"
-    % Check version and tag compatibility for release
+    % Check version and tag compatibility for release.
     ref = string( getenv( "GITHUB_REF" ) );
     gitTagNumber = extractAfter( ref, "refs/tags/v" );
     assert( v.Version == gitTagNumber, ...
-        "build:package:VersionTagMismatch", ...
-        "%s Toolbox version %s (from Contents.m) does not " + ...
+        "buildfile:packageTask:VersionTagMismatch", ...
+        "Toolbox version %s (from Contents.m) does not " + ...
         "match the current Git tag number (%s).", ...
-        v.Name, v.Version, gitTagNumber )
-    % Define stable name for GitHub
-    stableName = replace( v.Name, " ", "_" ) + ".mltbx";
-    s.OutputFile = fullfile( "releases", stableName );
+        v.Version, gitTagNumber )
+    % Define stable name for GitHub.
+    stableName = replace( meta.ToolboxName, ["-", " "], "_" ) + ".mltbx";
+    meta.OutputFile = fullfile( projectRoot, "releases", stableName );
 else
-    % Include version in toolbox file name
-    s.OutputFile = fullfile( ...
-        "releases", v.Name + " " + v.Version + ".mltbx" );
+    % Include the version number in the toolbox file name.
+    meta.OutputFile = fullfile( projectRoot, ...
+        "releases", meta.ToolboxName + " " + versionString + ".mltbx" );
 end % if
 
-% Create options object
-f = s.ToolboxFolder; % mandatory
-id = s.Identifier; % mandatory
-s = rmfield( s, ["Identifier", "ToolboxFolder"] ); % mandatory
-pv = [fieldnames( s ), struct2cell( s )]'; % optional
-o = matlab.addons.toolbox.ToolboxOptions( f, id, pv{:} );
-o.ToolboxVersion = string( o.ToolboxVersion ); % g3079185
+% Define the toolbox packaging options.
+folder = meta.ToolboxFolder;
+id = meta.Identifier;
+meta = rmfield( meta, ["Identifier", "ToolboxFolder"] );
+opts = matlab.addons.toolbox.ToolboxOptions( folder, id, meta );
 
-% Package
-matlab.addons.toolbox.packageToolbox( o )
-fprintf( 1, "[+] %s\n", o.OutputFile );
-
-% Add license
-lic = fileread( "LICENSE" );
-mlAddonSetLicense( char( o.OutputFile ), struct( "type", 'BSD', "text", lic ) );
+% Package the toolbox and add the license.
+matlab.addons.toolbox.packageToolbox( opts )
+fprintf( 1, "[+] %s\n", opts.OutputFile );
+lic = fileread( "license.txt" );
+mlAddonSetLicense( char( opts.OutputFile ), ...
+    struct( "type", "BSD", "text", lic ) );
 
 end % packageTask

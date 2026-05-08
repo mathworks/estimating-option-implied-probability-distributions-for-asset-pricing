@@ -21,8 +21,8 @@ The main steps in this workflow are:
 
 ## Installation and Getting Started
 The examples are provided as a [MATLAB toolbox](https://www.mathworks.com/help/matlab/matlab_prog/create-and-share-custom-matlab-toolboxes.html).
-1. Download the toolbox installer (the `.mltbx` file) from the `Releases` section on GitHub.
-2. Double-click on the `.mltbx` file to install the toolbox.
+1. Download the toolbox installer (the `Option_Implied_Prices.mltbx` file) from the `Releases` section on GitHub.
+2. Double-click on the `Option_Implied_Prices.mltbx` file to install the toolbox.
 3. Open the main example script: `>> edit DistributionsForAssetPricing`
 4. The examples rely on simulated option price data created by the function `generateSampleOptionData`.
 
