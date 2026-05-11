@@ -15,7 +15,6 @@ prj = plan.RootFolder;
 tbx = fullfile( prj, "tbx" );
 code = fullfile( tbx, tbxname() );
 tests = fullfile( prj, "tests" );
-doc = fullfile( tbx, tbxname(), "DistributionsForAssetPricing.m" );
 
 % Add the standard clean task.
 plan("clean") = matlab.buildtool.tasks.CleanTask();
@@ -40,7 +39,6 @@ plan("test") = matlab.buildtool.tasks.TestTask( tests, ...
     "Dependencies", "check" );
 
 % Add a task to export the Live Script to a Markdown file.
-plan("doc").Inputs = doc;
 plan("doc").Dependencies = "test";
 
 % Add the toolbox packaging task.
@@ -80,7 +78,8 @@ function docTask( context )
 % Generate a Markdown version of the main example script.
 
 % Main example script file.
-doc = context.Task.Inputs.Path;
+doc = fullfile( context.Plan.RootFolder, "tbx", tbxname, ...
+    "DistributionsForAssetPricing.m" );
 
 % Export to Markdown.
 [folder, filename] = fileparts( doc );
