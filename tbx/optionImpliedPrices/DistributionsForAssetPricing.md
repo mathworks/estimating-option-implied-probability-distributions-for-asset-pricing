@@ -422,6 +422,10 @@ Define a suitable range of strike price values for the interpolation.
 fitKCall = linspace(min(D.K)-4, max(pdfK)+6, 5000).';
 ```
 
+```matlabTextOutput
+Warning: Unable to generate graphics because of system configuration or graphics resource constraint. See MATLAB System Requirements or contact MathWorks technical support.
+```
+
 Preallocate space for the interpolated PDFs.
 
 ```matlab
