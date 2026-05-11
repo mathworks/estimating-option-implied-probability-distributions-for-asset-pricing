@@ -186,6 +186,8 @@ end % for
 
 \includegraphics[width=\maxwidth{56.196688409433015em}]{figure_2.png}
 
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_3.png}
+
 <a id="H_213E80C2"></a>
 
 # Use the SABR model to perform the interpolation.
@@ -254,7 +256,7 @@ lg = legend(legText, "Location", "eastoutside");
 title(lg, "Expiry Time (years)")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_3.png}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_4.png}
 
 ```matlab
 
@@ -274,7 +276,7 @@ lg = legend(legText, "Location", "eastoutside");
 title(lg, "Expiry Time (years)")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_4.png}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_5.png}
 
 <a id="H_EB5E2B22"></a>
 
@@ -391,9 +393,9 @@ for k = 1:width(approxCallPDFs)
 end % for
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_5.png}
-
 \includegraphics[width=\maxwidth{56.196688409433015em}]{figure_6.png}
+
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_7.png}
 
 <a id="H_ABBF9705"></a>
 
@@ -489,9 +491,9 @@ for k = 1:numel(pdfFitsCall)
 end % for
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_7.png}
-
 \includegraphics[width=\maxwidth{56.196688409433015em}]{figure_8.png}
+
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_9.png}
 
 <a id="H_F01A80EA"></a>
 
@@ -532,7 +534,7 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices, Using Call Price Data")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_9.png}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_10.png}
 
 Next, create a fan chart from the put option price data.
 
@@ -544,7 +546,7 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices, Using Put Price Data")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_10.png}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_11.png}
 
 Show the average forecast.
 
@@ -557,4 +559,4 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_11.png}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_12.png}
