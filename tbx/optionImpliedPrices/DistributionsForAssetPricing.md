@@ -1,6 +1,6 @@
 <a id="T_7032FF2A"></a>
 
-# **Estimating Option\-Implied Probability Distributions for Asset Pricing**
+# <span style="color:rgb(213,80,0)">**Estimating Option\-Implied Probability Distributions for Asset Pricing**</span>
 
 This Live Script contains the code for the technical article [Estimating Option\-Implied Probability Distributions for Asset Pricing](https://www.mathworks.com/company/technical-articles/estimating-option-implied-probability-distributions-for-asset-pricing.html)*.*
 
@@ -112,7 +112,7 @@ title(lg, "Expiry Time (years)")
 hold on
 ```
 
-![figure_0.png](DistributionsForAssetPricing_media/figure_0.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_0.png}
 
 Store the plot colors for future use.
 
@@ -134,6 +134,8 @@ lg = legend(legText, "Location", "eastoutside");
 title(lg, "Expiry Time (years)")
 hold on
 ```
+
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_1.png}
 
 <a id="H_B78A3D81"></a>
 
@@ -182,7 +184,7 @@ for k = 1:numel(T0)
 end % for
 ```
 
-![figure_1.png](DistributionsForAssetPricing_media/figure_1.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_2.png}
 
 <a id="H_213E80C2"></a>
 
@@ -252,7 +254,7 @@ lg = legend(legText, "Location", "eastoutside");
 title(lg, "Expiry Time (years)")
 ```
 
-![figure_2.png](DistributionsForAssetPricing_media/figure_2.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_3.png}
 
 ```matlab
 
@@ -271,6 +273,8 @@ grid on
 lg = legend(legText, "Location", "eastoutside");
 title(lg, "Expiry Time (years)")
 ```
+
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_4.png}
 
 <a id="H_EB5E2B22"></a>
 
@@ -387,7 +391,9 @@ for k = 1:width(approxCallPDFs)
 end % for
 ```
 
-![figure_3.png](DistributionsForAssetPricing_media/figure_3.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_5.png}
+
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_6.png}
 
 <a id="H_ABBF9705"></a>
 
@@ -483,7 +489,9 @@ for k = 1:numel(pdfFitsCall)
 end % for
 ```
 
-![figure_4.png](DistributionsForAssetPricing_media/figure_4.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_7.png}
+
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_8.png}
 
 <a id="H_F01A80EA"></a>
 
@@ -524,7 +532,7 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices, Using Call Price Data")
 ```
 
-![figure_5.png](DistributionsForAssetPricing_media/figure_5.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_9.png}
 
 Next, create a fan chart from the put option price data.
 
@@ -536,7 +544,7 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices, Using Put Price Data")
 ```
 
-![figure_6.png](DistributionsForAssetPricing_media/figure_6.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_10.png}
 
 Show the average forecast.
 
@@ -549,4 +557,4 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices")
 ```
 
-![figure_7.png](DistributionsForAssetPricing_media/figure_7.png)
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_11.png}
