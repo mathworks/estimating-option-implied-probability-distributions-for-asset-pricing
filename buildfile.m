@@ -75,27 +75,19 @@ end % if
 end % checkProject
 
 function docTask( context )
-% Generate a Markdown version of the main example script.
+% Generate a PDF version of the main example script.
 
 % Define the task inputs and output.
 root = context.Plan.RootFolder;
 mainScript = "DistributionsForAssetPricing";
 mainFolder = fullfile( root, "tbx", tbxname() );
 docIn = fullfile( mainFolder, mainScript + ".m" );
-media = fullfile( mainFolder, mainScript + "_media" );
-docOut = fullfile( mainFolder, mainScript + ".md" );
+docOut = fullfile( mainFolder, mainScript + ".pdf" );
 
-% Execute and save the Live Script.
-matlab.internal.liveeditor.executeAndSave( char( docIn ) );
-
-% Export to Markdown.
+% Export to PDF.
 export( docIn, docOut, ...
-    "Format", "markdown", ...
-    "Run", false, ...
-    "EmbedImages", false, ...    
-    "AcceptHTML", true, ...
-    "MediaLocation", media, ...
-    "IncludeOutputs", true );
+    "Format", "pdf", ...
+    "Run", true );
 
 end % docTask
 
