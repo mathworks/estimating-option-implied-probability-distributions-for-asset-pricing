@@ -30,7 +30,6 @@ plan("check:project") = matlab.buildtool.Task( ...
     "Description", "Run MATLAB project checks", ...
     "Actions", @checkProject, ...
     "Inputs", prj );
-plan("check").Dependencies = "doc";
 
 % Add a test task.
 plan("test") = matlab.buildtool.tasks.TestTask( tests, ...
@@ -40,17 +39,12 @@ plan("test") = matlab.buildtool.tasks.TestTask( tests, ...
     "Dependencies", "check" );
 
 % Add a task to export the Live Script to a Markdown file.
-mainScript = "DistributionsForAssetPricing";
-docIn = fullfile( tbx, tbxname(), mainScript + ".m" );
-media = fullfile( tbx, tbxname(), mainScript + "Figures" );
-docOut = fullfile( tbx, tbxname(), mainScript + ".md" );
-plan("doc").Inputs = [docIn, media];
-plan("doc").Outputs = docOut;
+plan("doc").Dependencies = "test";
 
 % Add the toolbox packaging task.
 plan("package").Inputs = tbx;
 plan("package").Outputs = "releases/*.mltbx";
-plan("package").Dependencies = "test";
+plan("package").Dependencies = "doc";
 
 end % buildfile
 
@@ -83,15 +77,25 @@ end % checkProject
 function docTask( context )
 % Generate a Markdown version of the main example script.
 
+% Define the task inputs and output.
+root = context.Plan.RootFolder;
+mainScript = "DistributionsForAssetPricing";
+mainFolder = fullfile( root, "tbx", tbxname() );
+docIn = fullfile( mainFolder, mainScript + ".m" );
+media = fullfile( mainFolder, mainScript + "_media" );
+docOut = fullfile( mainFolder, mainScript + ".md" );
+
+% Execute and save the Live Script.
+matlab.internal.liveeditor.executeAndSave( char( docIn ) );
+
 % Export to Markdown.
-task = context.Task;
-export( task.Inputs(1).Path, task.Outputs.Path, ...
+export( docIn, docOut, ...
     "Format", "markdown", ...
-    "EmbedImages", true, ...
-    "MediaLocation", task.Inputs(2).Path, ...
+    "Run", false, ...
+    "EmbedImages", false, ...    
     "AcceptHTML", true, ...
-    "IncludeOutputs", true, ...
-    "Run", true );
+    "MediaLocation", media, ...
+    "IncludeOutputs", true );
 
 end % docTask
 

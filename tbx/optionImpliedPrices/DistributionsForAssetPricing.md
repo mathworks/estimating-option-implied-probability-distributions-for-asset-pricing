@@ -112,7 +112,7 @@ title(lg, "Expiry Time (years)")
 hold on
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_0.png}
+<center><img src="DistributionsForAssetPricing_media/figure_0.png" width="562" alt="figure_0.png"></center>
 
 Store the plot colors for future use.
 
@@ -135,7 +135,7 @@ title(lg, "Expiry Time (years)")
 hold on
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_1.png}
+<center><img src="DistributionsForAssetPricing_media/figure_1.png" width="562" alt="figure_1.png"></center>
 
 <a id="H_B78A3D81"></a>
 
@@ -184,7 +184,7 @@ for k = 1:numel(T0)
 end % for
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_2.png}
+<center><img src="DistributionsForAssetPricing_media/figure_2.png" width="562" alt="figure_2.png"></center>
 
 <a id="H_213E80C2"></a>
 
@@ -254,7 +254,7 @@ lg = legend(legText, "Location", "eastoutside");
 title(lg, "Expiry Time (years)")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_3.png}
+<center><img src="DistributionsForAssetPricing_media/figure_3.png" width="562" alt="figure_3.png"></center>
 
 ```matlab
 
@@ -274,7 +274,7 @@ lg = legend(legText, "Location", "eastoutside");
 title(lg, "Expiry Time (years)")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_4.png}
+<center><img src="DistributionsForAssetPricing_media/figure_4.png" width="562" alt="figure_4.png"></center>
 
 <a id="H_EB5E2B22"></a>
 
@@ -391,9 +391,9 @@ for k = 1:width(approxCallPDFs)
 end % for
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_5.png}
+<center><img src="DistributionsForAssetPricing_media/figure_5.png" width="562" alt="figure_5.png"></center>
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_6.png}
+<center><img src="DistributionsForAssetPricing_media/figure_6.png" width="562" alt="figure_6.png"></center>
 
 <a id="H_ABBF9705"></a>
 
@@ -489,9 +489,9 @@ for k = 1:numel(pdfFitsCall)
 end % for
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_7.png}
+<center><img src="DistributionsForAssetPricing_media/figure_7.png" width="562" alt="figure_7.png"></center>
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_8.png}
+<center><img src="DistributionsForAssetPricing_media/figure_8.png" width="562" alt="figure_8.png"></center>
 
 <a id="H_F01A80EA"></a>
 
@@ -532,7 +532,7 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices, Using Call Price Data")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_9.png}
+<center><img src="DistributionsForAssetPricing_media/figure_9.png" width="562" alt="figure_9.png"></center>
 
 Next, create a fan chart from the put option price data.
 
@@ -544,7 +544,7 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices, Using Put Price Data")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_10.png}
+<center><img src="DistributionsForAssetPricing_media/figure_10.png" width="562" alt="figure_10.png"></center>
 
 Show the average forecast.
 
@@ -557,4 +557,4 @@ ylabel("Future Asset Price")
 title("Option-Implied Asset Prices")
 ```
 
-\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_11.png}
+<center><img src="DistributionsForAssetPricing_media/figure_11.png" width="562" alt="figure_11.png"></center>
