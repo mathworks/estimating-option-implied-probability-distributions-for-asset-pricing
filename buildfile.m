@@ -38,7 +38,7 @@ plan("test") = matlab.buildtool.tasks.TestTask( tests, ...
     "SourceFiles", code, ...
     "Dependencies", "check" );
 
-% Add a task to export the Live Script to a Markdown file.
+% Add a task to export the Live Script as a PDF.
 plan("doc").Dependencies = "test";
 
 % Add the toolbox packaging task.
