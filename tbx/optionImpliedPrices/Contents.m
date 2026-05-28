@@ -1,5 +1,5 @@
 % Option-Implied Prices
-% Version 1.0.5 (R2026a) 07-May-2026
+% Version 1.0.6 (R2026a) 28-May-2026
 %
 % DistributionsForAssetPricing - Main example script
 % generateSampleOptionData     - Function to create example data
