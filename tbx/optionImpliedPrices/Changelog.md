@@ -1,5 +1,9 @@
 # Release notes
 
+## Version 1.0.8
+
+* Fixed typo in release action
+
 ## Version 1.0.7
 
 * Extracted release notes using MATLAB code
