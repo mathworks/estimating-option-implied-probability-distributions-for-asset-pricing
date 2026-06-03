@@ -86,7 +86,7 @@ jobs:
             buildtool package -skip test -skip check
 
     - name: Release toolbox
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@v3
       with:
         name: Option-Implied Prices ${{ env.TOOLBOX_VERSION }}
         tag_name: v${{ env.TOOLBOX_VERSION }}
