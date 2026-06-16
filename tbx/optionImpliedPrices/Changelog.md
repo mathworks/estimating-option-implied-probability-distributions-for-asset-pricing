@@ -1,5 +1,9 @@
 # Release notes
 
+## Version 1.0.9
+
+* Added support for `code font` in release notes
+
 ## Version 1.0.8
 
 * Fixed typo in release action
