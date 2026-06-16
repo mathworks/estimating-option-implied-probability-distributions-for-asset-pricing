@@ -78,7 +78,7 @@ jobs:
             allVersionLines = find( startsWith( logLines, "##" ) );
             endIdx = allVersionLines(find( allVersionLines > startIdx, 1 )) - 1;
             releaseNotes = join( logLines(startIdx:endIdx), newline() );
-            tempFile = fullfile( tempname(), ".txt" );
+            tempFile = "ReleaseNotes.txt";
             writelines( releaseNotes, tempFile )
             delimiter = "EOF_" + matlab.lang.internal.uuid();
             systemCommand = sprintf( [ ...
